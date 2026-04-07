@@ -1,14 +1,26 @@
 ﻿@page
 @model RegisterModel
 
-
+@using System.Security.Claims
+@{
+    // We zoeken de claim die de rol bevat
+    var roleName = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+}
 
 <div class="card shadow border-0 mt-4">
     <div class="card-header bg-secondary bg-gradient ml-0 py-4">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="py-2 text-white">Register</h2>
+                @if(User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Employee))
+                {
+                    <h2 class="py-2 text-white">Register - @roleName.ToUpper() PORTAL</h2>
+                }
+                else
+                {
+                    <h2 class="py-2 text-white">Register</h2>
 
+                }
+                
             </div>
         </div>
     </div>
@@ -72,19 +84,29 @@
                         <label asp-for="Input.PostalCode" class="text-muted ms-2">PostalCode</label>
                         <span asp-validation-for="Input.PostalCode" class="text-danger"></span>
                     </div>
+                    @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Employee))
+                    {
+                        <div class="form-floating mb-3 col-md-6">
+                            <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-select">
+                                <option disabled selected>-Select Role</option>
+                            </select>
 
-                    <div class="form-floating mb-3 col-md-6">
-                        <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-select">
-                            <option disabled selected>-Select Role</option>
-                        </select>
+                        </div>
+                        <div class="form-floating mb-3 col-md-6">
+                            <select asp-for="Input.CompanyId" asp-items="@Model.Input.CompanyList" style="display:none;" class="form-select">
+                                <option disabled selected>-Select Company</option>
+                            </select>
 
-                    </div>
+                        </div>
+                    }
                     <div class="col-12">
                         <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
                     </div>
                 </form>
             </div>
-            <div class="col-md-12">
+            @if(!User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Employee))
+            {
+                <div class="col-md-12 p-3 text-center" >
                 <section>
                     <p class="divider-text d-flex pt-3">or</p>
                     <h3>Use another service to register.</h3>
@@ -116,6 +138,8 @@
                     }
                 </section>
             </div>
+            }
+            
         </div>
 
     </div>
@@ -124,4 +148,21 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ready(function () {
+            $('#Input_Role').change(function () {
+                var selection = $('#Input_Role Option:Selected').text();
+                if(selection == 'Company'){
+                    console.log(selection);
+
+                    $('#Input_CompanyId').show();
+
+                }
+                else{
+                    $('#Input_CompanyId').hide();
+                }
+            });
+        });
+    </script>
+
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Bulky.Models.ViewModels
 {
-    public class ProductVM
+    public sealed class ProductVM
     {
 
         public Product Product { get; set; }

@@ -1,0 +1,39 @@
+﻿@model Bulky.Models.ViewModels.AnalyticsVM
+
+<div class="card shadow border-0 my-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">Business Insights</h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <div class="row pb-3">
+            <div class="col-lg-3 col-md-6">
+                <div class="p-3 border-left-primary shadow-sm rounded bg-light">
+                    <h6 class="text-primary text-uppercase">Magazijn Waarde</h6>
+                    <span class="h4">€@Model.TotalInventoryValue.ToString("N2")</span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="p-3 border-left-success shadow-sm rounded bg-light">
+                    <h6 class="text-success text-uppercase">Potentiële Winst</h6>
+                    <span class="h4">€@Model.TotalPotentialProfit.ToString("N2")</span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="p-3 border-left-info shadow-sm rounded bg-light">
+                    <h6 class="text-info text-uppercase">Gem. Marge %</h6>
+                    <span class="h4">@Model.AverageMarkup.ToString("N1")%</span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="p-3 border-left-warning shadow-sm rounded bg-light">
+                    <h6 class="text-warning text-uppercase">Top Earner</h6>
+                    <span class="h6 text-truncate d-block">@Model.MostProfitableProduct</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -15,6 +15,19 @@ function loadDataTable() {
             { data: 'author', "width": "15%" },
             { data: 'category.name', "width": "10%" },
             {
+                data: null,
+                render: function (data, type, row) {
+                    var price = row.listPrice ?? 0;
+                    var purchase = row.purchasePrice ?? 0;
+                    var profit = price - purchase;
+
+                    var color = profit >= 0 ? "text-success" : "text-danger";
+
+                    return `<span class="${color}">€${profit.toFixed(2)}</span>`;
+                },
+                width: "10%"
+            },
+            {
                 data: 'id',
 
                 "render": function (data) {
@@ -27,8 +40,8 @@ function loadDataTable() {
                     `
                 }, width: "25%"
             }
-        ]  
-    });  
+        ]
+    });
 }
 
 function Delete(url) {

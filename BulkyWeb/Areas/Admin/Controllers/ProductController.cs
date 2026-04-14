@@ -87,6 +87,19 @@ namespace BulkyWeb.Areas.Admin.Controllers
                     }
                     productVM.Product.ImageUrl = @"\images\product\" + fileName + extension;
                 }
+
+                else if(productVM.Product.Id == 0)
+                {
+                    // If no file is uploaded and it's a new product, we can set a default image or leave it null
+                    ModelState.AddModelError("Product.ImageUrl", "Please upload an image.");
+                    productVM.CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
+                    {
+                        Text = u.Name,
+                        Value = u.Id.ToString()
+                    });
+                    return View(productVM);
+                }
+
                 if (productVM.Product.Id == 0)
                 {
                     _unitOfWork.Product.Add(productVM.Product);
@@ -120,7 +133,8 @@ namespace BulkyWeb.Areas.Admin.Controllers
         public IActionResult GetAll()
         {
             List<Product> objProductList = _unitOfWork.Product.GetAll(includeProperties: "Category").ToList();
-            return Json(new { data = objProductList });
+            var a = Json(new { data = objProductList });
+            return a;
         }
 
         [HttpDelete]

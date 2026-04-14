@@ -49,6 +49,10 @@ namespace Bulky.Models
 
         public double Price100 { get; set; }
 
+        [Display(Name = "PurchasePrice")]
+        [Range(1, 1000)]
+        public double? PurchasePrice { get; set; }
+
         public int CategoryId { get; set; }
         [ForeignKey("CategoryId")]
 

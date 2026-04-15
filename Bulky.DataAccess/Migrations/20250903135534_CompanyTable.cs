@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Bulky.DataAccess.Migrations
+namespace MAY.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class CompanyTable : Migration

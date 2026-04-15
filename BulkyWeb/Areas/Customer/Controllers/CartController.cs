@@ -1,7 +1,7 @@
-﻿using Bulky.DataAccess.Repository.IRepository;
-using Bulky.Models;
-using Bulky.Models.ViewModels;
-using Bulky.Utility;
+﻿using MAY.DataAccess.Repository.IRepository;
+using MAY.Models;
+using MAY.Models.ViewModels;
+using MAY.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -10,7 +10,7 @@ using System.Drawing.Imaging;
 using System.Drawing.Text;
 using System.Security.Claims;
 
-namespace BulkyWeb.Areas.Customer.Controllers
+namespace MAYWeb.Areas.Customer.Controllers
 {
     [Area("Customer")]
     [Authorize]

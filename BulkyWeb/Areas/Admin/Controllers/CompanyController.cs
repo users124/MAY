@@ -1,13 +1,13 @@
-﻿using Bulky.DataAccess.Data;
-using Bulky.DataAccess.Repository.IRepository;
-using Bulky.Models;
-using Bulky.Models.ViewModels;
-using Bulky.Utility;
+﻿using MAY.DataAccess.Data;
+using MAY.DataAccess.Repository.IRepository;
+using MAY.Models;
+using MAY.Models.ViewModels;
+using MAY.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace BulkyWeb.Areas.Admin.Controllers
+namespace MAYWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = SD.Role_Admin)]

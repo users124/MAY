@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bulky.Models.ViewModels
+namespace MAY.Models.ViewModels
 {
     public sealed class AnalyticsVM
     {

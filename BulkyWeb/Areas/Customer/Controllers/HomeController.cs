@@ -1,12 +1,12 @@
 using System.Diagnostics;
 using System.Security.Claims;
-using Bulky.DataAccess.Repository.IRepository;
-using Bulky.Models;
-using Bulky.Utility;
+using MAY.DataAccess.Repository.IRepository;
+using MAY.Models;
+using MAY.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BulkyWeb.Areas.Customer.Controllers
+namespace MAYWeb.Areas.Customer.Controllers
 {
     [Area("Customer")]
     public class HomeController : Controller

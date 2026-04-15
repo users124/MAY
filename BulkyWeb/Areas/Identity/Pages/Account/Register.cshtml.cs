@@ -10,9 +10,9 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading;
 using System.Threading.Tasks;
-using Bulky.DataAccess.Repository.IRepository;
-using Bulky.Models;
-using Bulky.Utility;
+using MAY.DataAccess.Repository.IRepository;
+using MAY.Models;
+using MAY.Utility;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -24,7 +24,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 
-namespace BulkyWeb.Areas.Identity.Pages.Account
+namespace MAYWeb.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {

@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-namespace Bulky.Models
+namespace MAY.Models
 {
     public class Category
     {

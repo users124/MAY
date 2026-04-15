@@ -1,6 +1,6 @@
-﻿using Bulky.DataAccess.Data;
-using Bulky.Models;
-using Bulky.Utility;
+﻿using MAY.DataAccess.Data;
+using MAY.Models;
+using MAY.Utility;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bulky.DataAccess.DbInitializer
+namespace MAY.DataAccess.DbInitializer
 {
     public class DbInitializer : IDbInitializer
     {
@@ -49,7 +49,7 @@ namespace Bulky.DataAccess.DbInitializer
                 {
                     UserName = "admin@may.com",
                     Email = "admin@may.com",
-                    Name = "Mohammed BulkyAdmin",
+                    Name = "Mohammed MAYAdmin",
                     PhoneNumber = "1234567890",
                     StreetAddress = "123 Main St",
                     City = "Anytown",

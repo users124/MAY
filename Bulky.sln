@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36221.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BulkyWeb", "BulkyWeb\BulkyWeb.csproj", "{E33C9B99-90E0-4A79-AE5D-8C53AC3A7C8C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAYWeb", "BulkyWeb\MAYWeb.csproj", "{E33C9B99-90E0-4A79-AE5D-8C53AC3A7C8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bulky.DataAccess", "Bulky.DataAccess\Bulky.DataAccess.csproj", "{F747748D-4EB2-4101-A023-275C3A3E44DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAY.DataAccess", "Bulky.DataAccess\MAY.DataAccess.csproj", "{F747748D-4EB2-4101-A023-275C3A3E44DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bulky.Models", "Bulky.Models\Bulky.Models.csproj", "{7D56D5A4-BEA7-4074-8C56-FA53BCDFEE64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAY.Models", "Bulky.Models\MAY.Models.csproj", "{7D56D5A4-BEA7-4074-8C56-FA53BCDFEE64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bulky.Utility", "Bulky.Utility\Bulky.Utility.csproj", "{2CCEF88D-D668-4181-9133-5818611348E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAY.Utility", "Bulky.Utility\MAY.Utility.csproj", "{2CCEF88D-D668-4181-9133-5818611348E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

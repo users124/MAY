@@ -1,9 +1,9 @@
-using Bulky.DataAccess.Data;
-using Bulky.DataAccess.Repository;
-using Bulky.DataAccess.Repository.IRepository;
+using MAY.DataAccess.Data;
+using MAY.DataAccess.Repository;
+using MAY.DataAccess.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-using Bulky.Utility;
+using MAY.Utility;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Stripe;
 

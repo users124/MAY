@@ -1,7 +1,7 @@
-﻿using Bulky.DataAccess.Repository.IRepository;
-using Bulky.Models;
-using Bulky.Models.ViewModels;
-using Bulky.Utility;
+﻿using MAY.DataAccess.Repository.IRepository;
+using MAY.Models;
+using MAY.Models.ViewModels;
+using MAY.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
@@ -9,7 +9,7 @@ using Stripe;
 using Stripe.Checkout;
 using System.Security.Claims;
 
-namespace BulkyWeb.Areas.Admin.Controllers
+namespace MAYWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize]

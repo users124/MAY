@@ -7,6 +7,7 @@ using MAY.Utility;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Stripe;
 using MAY.DataAccess.DbInitializer;
+using MAY.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +20,12 @@ builder.Services.AddDbContext<ApplicationDbContext>
 
 builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 
-builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+{
+    options.User.RequireUniqueEmail = true; // Require unique email for each user
+})
+.AddEntityFrameworkStores<ApplicationDbContext>()
+.AddDefaultTokenProviders();
 
 builder.Services.ConfigureApplicationCookie(option => {
     option.LoginPath = $"/Identity/Account/Login";

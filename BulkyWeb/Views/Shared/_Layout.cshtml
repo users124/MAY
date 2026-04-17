@@ -29,26 +29,28 @@
                             <a class="nav-link" asp-area ="Customer"  asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Admin" asp-controller="Order" asp-action="Index">Manage Order</a>
+                            <a class="nav-link" asp-area="Admin" asp-controller="Order" asp-action="Index">Bestellingen</a>
                         </li>
+
                         @if (User.IsInRole(SD.Role_Admin))
-                        {                        
+                        {
+
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Content Managment
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">categorie</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Products</a>
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">producten</a>
                                     <li>
                                     <li class="nav-item">
-                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a>
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">bedrijf</a>
                                     <li>
                                     <li class="nav-item">
-                                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Create User</a>
+                                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Gebruiker aanmaken</a>
                                     <li>
                                     <li>
                                         <a class="dropdown-item" asp-area="Admin" asp-controller="Analytics" asp-action="Index">Analytics Dashboard</a>

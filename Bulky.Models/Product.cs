@@ -14,16 +14,16 @@ namespace MAY.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        public string Title { get; set; }
+        public string ProductName { get; set; } = null!;
         [Required]
-        public string Description { get; set; }
+        public string Description { get; set; } = null!;
 
         [Required]
-        public string ISBN { get; set; }
+        public string SKU { get; set; } = null!;
 
+        [MaxLength(13)]
         [Required]
-        public string Author { get; set; }
-
+        public string EAN { get; set; } = null!;
 
         [Required]
         [Display(Name ="List Price")]
@@ -57,13 +57,17 @@ namespace MAY.Models
         [Range(1, 999)]
         public int Stock { get; set; } = 0;
 
+        public string? Material { get; set; }
+        public string? Dimensions { get; set; }
+        public string? Color { get; set; }
+
         public int CategoryId { get; set; }
 
         [ForeignKey("CategoryId")]
         [ValidateNever]
-        public Category Category { get; set; }
+        public Category Category { get; set; } = null!;
 
         [ValidateNever]
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
     }
 }

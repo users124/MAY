@@ -145,7 +145,7 @@ namespace MAYWeb.Areas.Customer.Controllers
                             Currency = "usd",
                             ProductData = new Stripe.Checkout.SessionLineItemPriceDataProductDataOptions
                             {
-                                Name = item.Product.Title,
+                                Name = item.Product.ProductName,
                             },
                         },
                         Quantity = item.Count,

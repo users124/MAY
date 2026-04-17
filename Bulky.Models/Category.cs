@@ -8,7 +8,7 @@ namespace MAY.Models
         [Required]
         [MaxLength(30)]
         [Display(Name = "Category Name")]
-        public string Name { get; set; }
+        public string Name { get; set; } = null!;
         [Display(Name = "Display Order")]
         [Range(1, 100, ErrorMessage = "Display Order must be between 1-100") ]
         public int DisplayOrder { get; set; }

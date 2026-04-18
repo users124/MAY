@@ -2,18 +2,82 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 :root {
-    --primary-dark: #1e293b; /* Slate 800 */
-    --accent-color: #3b82f6; /* Modern Blue */
+    --primary-dark: #1e293b;
+    --accent-color: #3b82f6;
     --card-bg: #ffffff;
     --body-bg: #f8fafc;
+    --text-dark: #1f2937;
+    --text-muted: #6b7280;
+    --border-light: #e5ebf2;
+}
+
+/* Base layout */
+html,
+body {
+    height: 100%;
 }
 
 body {
     background-color: var(--body-bg);
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-dark);
 }
 
-/* De 'Anti-Bulky' Card */
+main {
+    flex: 1;
+}
+
+/* Navbar / default */
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-word;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    line-height: 60px;
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Product cards */
 .product-card {
     background: var(--card-bg);
     border: none;
@@ -27,12 +91,12 @@ body {
 
     .product-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
     }
 
 .product-image-container {
     padding: 1rem;
-    background: #f1f5f9; /* Lichtgrijze achtergrond voor de foto */
+    background: #f1f5f9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,25 +105,8 @@ body {
 .product-image {
     max-height: 200px;
     object-fit: contain;
-    mix-blend-mode: multiply; /* Zorgt dat witte achtergronden van foto's wegvallen */
+    mix-blend-mode: multiply;
 }
-
-/* Moderne Buttons */
-.btn-suite-primary {
-    background-color: var(--primary-dark);
-    color: white;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-weight: 500;
-    transition: all 0.2s;
-    text-align: center;
-    text-decoration: none;
-}
-
-    .btn-suite-primary:hover {
-        background-color: #334155;
-        color: #fff;
-    }
 
 .ean-badge {
     font-size: 0.75rem;
@@ -70,23 +117,189 @@ body {
     font-family: monospace;
 }
 
-/* Zorg dat de body de volledige hoogte van het scherm claimt */
-html {
-    position: relative;
-    min-height: 100%;
-}
-
-body {
-    /* Margin-bottom moet gelijk zijn aan de hoogte van je footer */
-    margin-bottom: 60px;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    white-space: nowrap;
-    line-height: 60px;
-    background-color: #1e293b; /* Maak hem dezelfde kleur als je knoppen voor eenheid */
+/* Buttons */
+.btn-suite-primary {
+    background-color: var(--primary-dark);
     color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.2s;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+}
+
+    .btn-suite-primary:hover {
+        background-color: #334155;
+        color: #fff;
+    }
+
+/* Product details page */
+.product-detail-card {
+    background: #fff;
+    border: none;
+    border-radius: 18px;
+    padding: 32px;
+}
+
+.back-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #4b6584;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+    .back-link:hover {
+        text-decoration: underline;
+    }
+
+.product-image-box {
+    background: #f8fafc;
+    border: 1px solid #eef2f7;
+    border-radius: 18px;
+    min-height: 420px;
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-main-image {
+    max-width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+}
+
+.sku-label {
+    display: inline-block;
+    background: #eef3f8;
+    color: #4b6584;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.product-detail-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--text-dark);
+    margin-bottom: 0;
+    text-transform: none;
+}
+
+.price-card {
+    background: #f9fbfd;
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 22px;
+}
+
+.old-price {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+    .old-price span {
+        text-decoration: line-through;
+    }
+
+.tier-pricing {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tier-row {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr 1fr;
+    gap: 12px;
+    align-items: center;
+}
+
+.tier-header {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 8px;
+}
+
+.tier-label {
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.tier-row:not(.tier-header) div:not(:first-child) {
+    color: #ea580c;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.product-description {
+    color: #374151;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.quantity-label {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.quantity-input {
+    max-width: 160px;
+    height: 50px;
+    border-radius: 12px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.add-cart-btn {
+    min-width: 220px;
+    height: 52px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.continue-btn {
+    min-width: 180px;
+    height: 52px;
+    border-radius: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .product-detail-card {
+        padding: 20px;
+    }
+
+    .product-detail-title {
+        font-size: 1.7rem;
+    }
+
+    .product-image-box {
+        min-height: 320px;
+    }
+
+    .product-main-image {
+        max-height: 280px;
+    }
+
+    .tier-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+        .tier-row:not(.tier-header) div:not(:first-child) {
+            font-size: 1.4rem;
+        }
 }

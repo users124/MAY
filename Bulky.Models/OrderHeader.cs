@@ -41,9 +41,8 @@ namespace MAY.Models
         [Required]
 
         public string City { get; set; }
-        [Required]
 
-        public string State { get; set; }
+        public string? State { get; set; } // State is for possible future use, as we are not using it for now,so we will keep it here for now.
         [Required]
 
         public string PostalCode { get; set; }

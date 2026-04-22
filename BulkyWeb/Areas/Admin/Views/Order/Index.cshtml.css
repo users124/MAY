@@ -1,0 +1,23 @@
+﻿/* Custom styling voor de DataTable binnen deze pagina */
+#tblData_wrapper .dataTables_length select,
+#tblData_wrapper .dataTables_filter input {
+    border-radius: 10px;
+    border: 1px solid var(--border-light);
+    padding: 8px 12px;
+    background-color: #f8fafc;
+}
+
+#tblData thead th {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding-bottom: 20px;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--primary-dark) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.nav-pills .nav-link:not(.active) {
+    color: var(--text-muted);
+}

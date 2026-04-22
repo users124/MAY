@@ -1,0 +1,444 @@
+﻿.may-order-page {
+    --may-bg: #f3f6fb;
+    --may-surface: #ffffff;
+    --may-surface-soft: #f8fbff;
+    --may-border: #d9e2ef;
+    --may-border-strong: #bfd0e3;
+    --may-text: #1e293b;
+    --may-text-soft: #475569;
+    --may-text-muted: #64748b;
+    --may-heading: #0f172a;
+    --may-primary: #17365d;
+    --may-primary-dark: #0f2747;
+    --may-primary-soft: #eaf2fb;
+    --may-accent: #b96f17;
+    --may-success: #167c59;
+    --may-success-dark: #116246;
+    --may-danger: #b42318;
+    --may-danger-dark: #8f1c13;
+    --may-secondary: #274c77;
+    --may-secondary-dark: #1e3b5d;
+    --may-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    min-height: 100vh;
+    background: radial-gradient(circle at top left, rgba(23, 54, 93, 0.05), transparent 30%), linear-gradient(180deg, #f7f9fc 0%, #eef3f9 100%);
+    color: var(--may-text);
+}
+
+.may-order-shell {
+    max-width: 1280px;
+}
+
+.may-order-card {
+    background: var(--may-surface);
+    border: 1px solid rgba(191, 208, 227, 0.7);
+    border-radius: 24px;
+    box-shadow: var(--may-shadow);
+    overflow: hidden;
+}
+
+.may-order-topbar {
+    padding: 2rem 2rem 1.9rem;
+    background: linear-gradient(135deg, #08162d 0%, #0f2747 55%, #17365d 100%);
+    color: #ffffff;
+}
+
+.may-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #c8d7ea;
+    margin-bottom: 0.4rem;
+}
+
+.may-page-title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+.may-page-subtitle {
+    margin-top: 0.7rem;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.98rem;
+    max-width: 560px;
+}
+
+.may-order-content {
+    padding: 2rem;
+}
+
+.may-panel {
+    height: 100%;
+    background: linear-gradient(180deg, #ffffff 0%, #fcfdff 100%);
+    border: 1px solid var(--may-border);
+    border-radius: 20px;
+    padding: 1.6rem;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+.may-panel-main {
+    padding-bottom: 1.4rem;
+}
+
+.may-panel-summary {
+    position: sticky;
+    top: 1.5rem;
+}
+
+.may-section-heading {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.95rem;
+    border-bottom: 1px solid #e7eef7;
+}
+
+    .may-section-heading h4 {
+        margin: 0.15rem 0 0;
+        font-size: 1.85rem;
+        font-weight: 800;
+        color: var(--may-heading);
+        line-height: 1.15;
+    }
+
+.may-section-kicker {
+    color: var(--may-accent);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.may-details-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.may-field-row {
+    display: grid;
+    grid-template-columns: 155px minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+}
+
+.may-field-label {
+    padding-top: 0.95rem;
+    font-weight: 700;
+    font-size: 0.96rem;
+    color: var(--may-text-soft);
+}
+
+.may-field-control {
+    min-width: 0;
+}
+
+.may-input.form-control {
+    min-height: 52px;
+    border-radius: 14px;
+    border: 1px solid var(--may-border-strong);
+    background: #ffffff;
+    color: var(--may-text);
+    font-size: 0.97rem;
+    padding: 0.85rem 1rem;
+    box-shadow: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+    .may-input.form-control:focus {
+        border-color: #7aa6d6;
+        box-shadow: 0 0 0 0.2rem rgba(23, 54, 93, 0.10);
+    }
+
+    .may-input.form-control[readonly] {
+        background: #f4f7fb;
+        border-color: #e5edf6;
+        color: #334155;
+    }
+
+        .may-input.form-control[readonly]:focus {
+            box-shadow: none;
+            border-color: #e5edf6;
+        }
+
+.text-danger {
+    display: block;
+    margin-top: 0.45rem;
+    font-size: 0.88rem;
+}
+
+.may-status-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem 1.15rem;
+    background: linear-gradient(180deg, #f5f9ff 0%, #edf4fc 100%);
+    border: 1px solid #dce8f5;
+    border-radius: 16px;
+    margin-bottom: 1.4rem;
+}
+
+.may-status-label {
+    font-size: 0.74rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--may-primary);
+    margin-bottom: 0.2rem;
+}
+
+.may-status-note {
+    font-size: 0.88rem;
+    color: var(--may-text-muted);
+}
+
+.may-status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1rem;
+    border-radius: 999px;
+    background: #17365d;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 0.9rem;
+    min-width: 120px;
+    text-align: center;
+    box-shadow: 0 8px 18px rgba(23, 54, 93, 0.16);
+}
+
+.may-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.may-item-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e8eef6;
+}
+
+    .may-item-card:first-child {
+        padding-top: 0.2rem;
+    }
+
+    .may-item-card:last-child {
+        padding-bottom: 0.2rem;
+        border-bottom: none;
+    }
+
+.may-item-left {
+    min-width: 0;
+}
+
+.may-item-name {
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--may-heading);
+    margin-bottom: 0.35rem;
+    line-height: 1.35;
+}
+
+.may-item-meta {
+    color: var(--may-text-muted);
+    font-size: 0.93rem;
+    line-height: 1.55;
+}
+
+.may-item-total {
+    white-space: nowrap;
+    font-weight: 800;
+    font-size: 1.02rem;
+    color: var(--may-heading);
+}
+
+.may-total-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1.2rem 1.25rem;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #142b4c 0%, #1f3f69 100%);
+    color: #ffffff;
+    box-shadow: 0 16px 28px rgba(20, 43, 76, 0.18);
+}
+
+    .may-total-card span {
+        font-size: 1rem;
+        font-weight: 700;
+        opacity: 0.95;
+    }
+
+    .may-total-card strong {
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1;
+        color: #ffffff;
+    }
+
+.may-action-stack,
+.may-bottom-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.may-bottom-actions {
+    margin-top: 1.6rem;
+}
+
+.may-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    min-height: 52px;
+    border-radius: 14px;
+    padding: 0.85rem 1.15rem;
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+    .may-btn:hover {
+        transform: translateY(-1px);
+    }
+
+.may-btn-full {
+    width: 100%;
+}
+
+.may-btn-icon {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.may-btn-topbar {
+    min-width: 220px;
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow: 0 10px 20px rgba(8, 22, 45, 0.20);
+}
+
+    .may-btn-topbar:hover,
+    .may-btn-topbar:focus {
+        background: #ffffff;
+        color: #0f2747;
+        border-color: #ffffff;
+        text-decoration: none;
+    }
+
+.may-btn-primary {
+    background: linear-gradient(135deg, #17365d 0%, #214a7d 100%);
+    color: #ffffff;
+    border-color: #17365d;
+    box-shadow: 0 12px 22px rgba(23, 54, 93, 0.16);
+}
+
+    .may-btn-primary:hover,
+    .may-btn-primary:focus {
+        background: linear-gradient(135deg, #102946 0%, #17365d 100%);
+        color: #ffffff;
+        border-color: #102946;
+    }
+
+.may-btn-success {
+    background: linear-gradient(135deg, var(--may-success) 0%, #1f9a70 100%);
+    color: #ffffff;
+    border-color: var(--may-success);
+    box-shadow: 0 12px 22px rgba(22, 124, 89, 0.18);
+}
+
+    .may-btn-success:hover,
+    .may-btn-success:focus {
+        background: linear-gradient(135deg, var(--may-success-dark) 0%, var(--may-success) 100%);
+        color: #ffffff;
+        border-color: var(--may-success-dark);
+    }
+
+.may-btn-secondary {
+    background: linear-gradient(135deg, var(--may-secondary) 0%, #35618f 100%);
+    color: #ffffff;
+    border-color: var(--may-secondary);
+    box-shadow: 0 12px 22px rgba(39, 76, 119, 0.18);
+}
+
+    .may-btn-secondary:hover,
+    .may-btn-secondary:focus {
+        background: linear-gradient(135deg, var(--may-secondary-dark) 0%, var(--may-secondary) 100%);
+        color: #ffffff;
+        border-color: var(--may-secondary-dark);
+    }
+
+.may-btn-danger {
+    background: linear-gradient(135deg, var(--may-danger) 0%, #cf3d31 100%);
+    color: #ffffff;
+    border-color: var(--may-danger);
+    box-shadow: 0 12px 22px rgba(180, 35, 24, 0.18);
+}
+
+    .may-btn-danger:hover,
+    .may-btn-danger:focus {
+        background: linear-gradient(135deg, var(--may-danger-dark) 0%, var(--may-danger) 100%);
+        color: #ffffff;
+        border-color: var(--may-danger-dark);
+    }
+
+@media (max-width: 1199.98px) {
+    .may-panel-summary {
+        position: static;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .may-order-topbar,
+    .may-order-content {
+        padding: 1.25rem;
+    }
+
+    .may-page-title {
+        font-size: 1.65rem;
+    }
+
+    .may-section-heading h4 {
+        font-size: 1.55rem;
+    }
+
+    .may-field-row {
+        grid-template-columns: 1fr;
+        gap: 0.45rem;
+    }
+
+    .may-field-label {
+        padding-top: 0;
+    }
+
+    .may-status-card,
+    .may-item-card,
+    .may-total-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .may-status-badge,
+    .may-item-total {
+        width: 100%;
+        text-align: left;
+    }
+
+    .may-btn-topbar {
+        width: 100%;
+    }
+}

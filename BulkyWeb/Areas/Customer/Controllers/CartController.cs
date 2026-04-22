@@ -75,12 +75,6 @@ namespace MAYWeb.Areas.Customer.Controllers
         [ActionName("Summary")]
         public IActionResult SummaryPOST()
         {
-            if (!ModelState.IsValid)
-            {
-                // Als er iets mist (zoals die bug die je vond), 
-                // stuur de gebruiker terug naar de view met de meldingen.
-                return View(ShoppingCartVM);
-            }
 
 
             var claimsIdentity = (ClaimsIdentity)User.Identity;
@@ -91,12 +85,14 @@ namespace MAYWeb.Areas.Customer.Controllers
             ShoppingCartVM.OrderHeader.OrderDate = DateTime.Now;
             ShoppingCartVM.OrderHeader.ApplicationUserId = userId;
 
-            if (!ModelState.IsValid)
+/*            if (!ModelState.IsValid)
             {
                 // 3. De lijst is hierboven al gepopuleerd
-                return View(ShoppingCartVM);
-            }
-            ApplicationUser applicationUser = _unitOfWork.ApplicationUser.Get(u => u.Id == userId);
+                ModelState.Where(kvp => kvp.Value.Errors.Count > 0).Select(kvp => new { kvp.Key, Errors = kvp.Value.Errors.Select(e => e.ErrorMessage) });
+                var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
+                return View(ShoppingCartVM);*/
+/*            }
+*/            ApplicationUser applicationUser = _unitOfWork.ApplicationUser.Get(u => u.Id == userId);
 
 
             foreach (var cart in ShoppingCartVM.ShoppingCartList)

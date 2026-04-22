@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -12,6 +13,8 @@ namespace MAY.Models
     public class OrderHeader
     {
         public int Id { get; set; }
+        [BindNever]
+        [ValidateNever]
         public string ApplicationUserId { get; set; }
 
         [ForeignKey("ApplicationUserId")]

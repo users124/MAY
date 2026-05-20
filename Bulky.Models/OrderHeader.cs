@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -12,6 +13,8 @@ namespace MAY.Models
     public class OrderHeader
     {
         public int Id { get; set; }
+        [BindNever]
+        [ValidateNever]
         public string ApplicationUserId { get; set; }
 
         [ForeignKey("ApplicationUserId")]
@@ -41,9 +44,8 @@ namespace MAY.Models
         [Required]
 
         public string City { get; set; }
-        [Required]
 
-        public string State { get; set; }
+        public string? State { get; set; } // State is for possible future use, as we are not using it for now,so we will keep it here for now.
         [Required]
 
         public string PostalCode { get; set; }

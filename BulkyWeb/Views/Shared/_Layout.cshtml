@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MAYWeb</title>
+    <title>@ViewData["Title"] - MAY</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MAYWeb.styles.css" asp-append-version="true" />
@@ -18,7 +18,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary border-bottom box-shadow mb-3">
             <div class="container-fluid"> 
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MAYWeb</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MAY</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -29,26 +29,28 @@
                             <a class="nav-link" asp-area ="Customer"  asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Admin" asp-controller="Order" asp-action="Index">Manage Order</a>
+                            <a class="nav-link" asp-area="Admin" asp-controller="Order" asp-action="Index">Bestellingen</a>
                         </li>
+
                         @if (User.IsInRole(SD.Role_Admin))
-                        {                        
+                        {
+
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Content Managment
+                                    Beheerpanel
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">categorie</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Products</a>
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">producten</a>
                                     <li>
                                     <li class="nav-item">
-                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a>
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">bedrijf</a>
                                     <li>
                                     <li class="nav-item">
-                                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Create User</a>
+                                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Gebruiker aanmaken</a>
                                     <li>
                                     <li>
                                         <a class="dropdown-item" asp-area="Admin" asp-controller="Analytics" asp-action="Index">Analytics Dashboard</a>
@@ -89,9 +91,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted bg-primary">
+    <footer class="border-top footer border-top">
         <div class="text-center">
-           Made with <i class="bi bi-heart-fill"></i> By DotNetMastery
+           MAY
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

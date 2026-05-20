@@ -24,8 +24,4 @@
     <ProjectReference Include="..\Bulky.DataAccess\MAY.DataAccess.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\Images\product\" />
-  </ItemGroup>
-
 	</Project>

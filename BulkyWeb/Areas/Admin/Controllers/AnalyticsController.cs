@@ -32,7 +32,7 @@ namespace MAYWeb.Areas.Admin.Controllers
                 // Product met de hoogste marge per stuk
                 MostProfitableProduct = productList
                     .OrderByDescending(u => u.ListPrice - (u.PurchasePrice ?? 0))
-                    .Select(u => u.Title)
+                    .Select(u => u.ProductName)
                     .FirstOrDefault() ?? "Geen data"
             };
 

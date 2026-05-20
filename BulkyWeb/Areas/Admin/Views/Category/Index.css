@@ -1,0 +1,22 @@
+﻿.custom-table tbody tr {
+    transition: all 0.2s;
+    border-left: 4px solid transparent;
+}
+
+    .custom-table tbody tr:hover {
+        background-color: #f8f9fa;
+        border-left: 4px solid #212529; /* De "Business" accentkleur */
+    }
+
+.btn-white {
+    background: #fff;
+    border: 1px solid #eee;
+}
+
+    .btn-white:hover {
+        background: #f1f1f1;
+    }
+
+.fs-7 {
+    font-size: 0.85rem;
+}
